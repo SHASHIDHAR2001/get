@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+    <title>Get rendering our db</title>
+</head>
+<body>
+    <h2 style="text-align: center;">All informatiion</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%noteList.forEach(note => {%>
+                <tr>
+                    <th scope="row"><%=note._id%></th>
+                    <td><%=note.title%></td>
+                    <td><%=note.content%></td>
+                <%})%>
+                </tr>
+
+            })
+        </tbody>
+    </table>
+
+</body>
+</html>
